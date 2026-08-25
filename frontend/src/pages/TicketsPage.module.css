@@ -1,0 +1,217 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+  gap: var(--spacing-lg);
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  flex: 1;
+  margin: 0;
+  color: var(--gray-600);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--gray-500);
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2xl);
+  text-align: center;
+  color: var(--gray-500);
+}
+
+.emptyState p {
+  margin-top: var(--spacing-lg);
+  font-size: 1.125rem;
+}
+
+.newTicketForm {
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.newTicketForm h2 {
+  margin-top: 0;
+}
+
+.newTicketForm label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+.newTicketForm input,
+.newTicketForm textarea,
+.newTicketForm select {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-sm);
+  font: inherit;
+  color: var(--gray-900);
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.formError {
+  color: var(--danger-color);
+}
+
+.ticketsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.ticketCard {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s;
+  border-left: 4px solid var(--primary-color);
+}
+
+.ticketCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.ticketHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.ticketHeader h3 {
+  margin: 0;
+}
+
+.ticketNumber {
+  background: var(--gray-100);
+  color: var(--gray-600);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: monospace;
+}
+
+.description {
+  color: var(--gray-600);
+  margin-bottom: var(--spacing-md);
+}
+
+.ticketMeta {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.category {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-color);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.priority {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.priority[data-priority="high"] {
+  background: var(--danger-light);
+  color: var(--danger-color);
+}
+
+.priority[data-priority="medium"] {
+  background: var(--warning-light);
+  color: var(--warning-color);
+}
+
+.priority[data-priority="low"] {
+  background: var(--success-light);
+  color: var(--success-color);
+}
+
+.resolution {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-left: 4px solid var(--success-color);
+  border-radius: var(--radius-sm);
+  background: var(--success-light);
+}
+
+.resolution h4 {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--success-color);
+}
+
+.resolution p {
+  margin: 0 0 var(--spacing-xs);
+  color: var(--gray-700);
+}
+
+.resolution small {
+  color: var(--gray-600);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
